@@ -413,7 +413,7 @@ public class GameManager : MonoBehaviour
         // Instancia el prefab de luz spotlight como hijo del objeto correcto
         GameObject luzInstanciada = Instantiate(luzCorrectoPrefab, palabraObjeto.objetoInstanciado.transform);
         luzInstanciada.transform.localPosition = Vector3.up * 2f;
-        Destroy(luzInstanciada, 30f);
+        Destroy(luzInstanciada, 20f);
     }
 
 
