@@ -653,7 +653,7 @@ MonoBehaviour:
     objetoPrefab: {fileID: 3539668417219842526, guid: c90f2f4b6882ad748a9a1988f413b629, type: 3}
     objetoInstanciado: {fileID: 4458005605199362811}
     rotacionInicialObjeto: {x: 0, y: 0, z: 0, w: 0}
-  - palabraEnIngles: Ketle
+  - palabraEnIngles: Kettle
     objetoPrefab: {fileID: 9042227772131719046, guid: 17aab07cde125b143b6b848c549121bc, type: 3}
     objetoInstanciado: {fileID: 1182518352}
     rotacionInicialObjeto: {x: 0, y: 0, z: 0, w: 0}
@@ -4249,7 +4249,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6fd1d866b5db4ed0a1411227aa935206, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6fd1d866b5db4ed0a1411227aa935206, type: 3}
       propertyPath: m_LocalScale.x
@@ -7456,7 +7456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5a24a380916d14db9775daab4fe333, type: 3}
@@ -8883,7 +8883,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1806842401
@@ -12159,7 +12159,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4673633192995001200, guid: a4b2cfc2fbcd5964caff334be69e7c34, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4673633192995001200, guid: a4b2cfc2fbcd5964caff334be69e7c34, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13119,7 +13119,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8335072970448204122, guid: 45688357ed9542e41bb89892e7ecc5d9, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8335072970448204122, guid: 45688357ed9542e41bb89892e7ecc5d9, type: 3}
       propertyPath: m_LocalPosition.x

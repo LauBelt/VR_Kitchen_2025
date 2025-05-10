@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public GameObject botonInicioJuego;
     public GameObject panelFinDeJuego;
     public TextMeshProUGUI textoFinDeJuego;
+    private List<PalabraObjeto> palabrasMastered = new List<PalabraObjeto>();
     private List<PalabraObjeto> palabrasIncorrectas = new List<PalabraObjeto>(); // Lista para guardar las palabras incorrectas en rondas anteriores
     private List<PalabraObjeto> palabrasEnRonda = new List<PalabraObjeto>();//Palabras seleccionadas para la ronda actual
     private Dictionary<string, GameObject> palabraACaja = new Dictionary<string, GameObject>(); //Diccionario para asociar palabras con GameObjects de las cajas de texto
@@ -172,7 +173,8 @@ public class GameManager : MonoBehaviour
             int palabrasFaltantes = 5 - palabrasEnRonda.Count;
             if (palabrasFaltantes > 0)
             {
-                List<PalabraObjeto> palabrasCorrectasRestantes = palabrasYObjetos.FindAll(p => !palabrasEnRonda.Contains(p));
+                //List<PalabraObjeto> palabrasCorrectasRestantes = palabrasYObjetos.FindAll(p => !palabrasEnRonda.Contains(p));
+                List<PalabraObjeto> palabrasCorrectasRestantes = palabrasYObjetos.FindAll(p => !palabrasEnRonda.Contains(p) && !palabrasMastered.Contains(p));
                 for (int i = 0; i < palabrasFaltantes && i < palabrasCorrectasRestantes.Count; i++)
                 {
                     palabrasEnRonda.Add(palabrasCorrectasRestantes[i]);// Agrega palabras adicionales hasta completar 5
@@ -181,7 +183,9 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            List<PalabraObjeto> seleccionAleatoria = new List<PalabraObjeto>(palabrasParaSeleccionar);
+            //List<PalabraObjeto> seleccionAleatoria = new List<PalabraObjeto>(palabrasParaSeleccionar);
+
+            List<PalabraObjeto> seleccionAleatoria = palabrasParaSeleccionar.Where(p => !palabrasMastered.Contains(p)).ToList();
             for (int i = 0; i < 5; i++)
             {
                 int indiceAleatorio = Random.Range(0, seleccionAleatoria.Count);
@@ -274,6 +278,8 @@ public class GameManager : MonoBehaviour
                     {
                         //palabrasIncorrectas.Remove(palabraObjetoArrastrado);
                     }
+                    if (!palabrasMastered.Contains(palabraObjetoArrastrado))
+                        palabrasMastered.Add(palabraObjetoArrastrado);
                 }
                 else
                 {
